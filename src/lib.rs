@@ -1,5 +1,6 @@
 //! This will run when is droped
-//! This will run with drop order, that means newest first
+//!
+//! This will run in drop order, that means newest first
 //!
 //! ## features:
 //!
@@ -11,6 +12,10 @@
 #![cfg_attr(not(feature = "std"), no_std)]
 
 pub struct AfterDrop<F: FnOnce()>(Option<F>);
+
+pub fn defer<F: FnOnce()>(func: F) -> AfterDrop<F> {
+    AfterDrop::new(func)
+}
 
 impl<F: FnOnce()> AfterDrop<F> {
     #[must_use]
