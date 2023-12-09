@@ -1,6 +1,6 @@
 [package]
 name = "after-drop"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2021"
 description = "Will act like defer in go or jai, but you can store it and move it"
 authors = ["konkitoman"]

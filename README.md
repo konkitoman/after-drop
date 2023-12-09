@@ -1,8 +1,7 @@
 # AfterDrop
 
 `AfterDropBoxed` is normaly used to store it in a struct,
- is not really use full because you will always need to create a wrapper for a external crate!
-But can be used for other crates to do something that thing is droped, but you define `AfterDropBoxed`
+Can be used for other crates to do something when a thing is droped!
 
 ## Inspiration
 
